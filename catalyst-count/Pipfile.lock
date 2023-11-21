@@ -1,0 +1,29 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "2397932d19e72d344f1c76acc44256a564254de0176b05a4f3087419254b9e50"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.10"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "django-progressbarupload": {
+            "hashes": [
+                "sha256:26ed611b189c674f86724c5f8714fd990a3f26c93401ff4cb62954aebda4e4c7",
+                "sha256:957ef23b0432421bd0629302e9a6efb546cdd97bac2fc55e2dd9d7af87937878"
+            ],
+            "index": "pypi",
+            "version": "==0.1.7"
+        }
+    },
+    "develop": {}
+}

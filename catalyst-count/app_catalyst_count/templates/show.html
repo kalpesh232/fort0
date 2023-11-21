@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}User List - My Website{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        {% if msg %}
+            <div class="alert alert-success col-12" role="alert">
+                {{ msg }}  <!-- Corrected from {{ messages }} -->
+            </div>
+        {% endif %}
+
+        <div class="table-responsive">
+            <!-- User Info Row -->
+            <div class="row mb-12">
+                <div class="col-md-6">
+                    <h3>{{ request.session.user_name }}</h3>
+                </div>
+                <div class="col-md-6 text-right">
+                    <button class="btn btn-primary" onclick="addUser()">Add User</button>
+                </div>
+            </div>
+            <br>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Flag</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.UserName }}</td>
+                            <td>{{ user.Email }}</td>
+                            <td>{{ user.Flag }}</td>
+                            <td>
+                                <button class="btn btn-danger" onclick="deleteUser('{{ user.id }}')">Delete</button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function addUser() {
+            // Add logic to handle adding a new user
+            alert('Implement add user functionality');
+        }
+
+        function deleteUser(userId) {
+            // Add logic to handle deleting a user with the given userId
+            alert('Implement delete user functionality for user with ID: ' + userId);
+        }
+    </script>
+{% endblock %}
